@@ -27,7 +27,7 @@ app.post('/merge', upload.array('pdfs', 2), async (req, res, next) => {
       path.join(__dirname, req.files[1].path)
     );
 
-    res.redirect(`http://localhost:3000/${d}.pdf`);
+    res.redirect(`https://pdf-merger-es4y.onrender.com/${d}.pdf`);
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
